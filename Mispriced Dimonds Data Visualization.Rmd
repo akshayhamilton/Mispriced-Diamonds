@@ -1,0 +1,25 @@
+---
+title: "Mispriced_Diamonds_ggplot"
+author: "Akshay Hamilton"
+date: "3/27/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+summary(mydata)
+```
+
+
+
+```{r}
+library("ggplot2")
+ggplot(data=mydata[mydata$carat<2.5,],
+       aes(x=carat, y=price, 
+           colour=clarity))+geom_point(alpha=0.1)+geom_smooth()
+  
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
