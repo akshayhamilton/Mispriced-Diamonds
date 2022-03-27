@@ -14,6 +14,7 @@ summary(mydata)
 
 
 ```{r}
+install.packages("ggplot2")
 library("ggplot2")
 ggplot(data=mydata[mydata$carat<2.5,],
        aes(x=carat, y=price, 
@@ -22,4 +23,3 @@ ggplot(data=mydata[mydata$carat<2.5,],
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
